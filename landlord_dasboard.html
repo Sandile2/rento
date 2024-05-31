@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Landlord Dashboard{% endblock %}
+{% block content %}
+    <h2>My Properties</h2>
+    <a class="btn btn-success" href="{{ url_for('add_property') }}">Add New Property</a>
+    <ul>
+        {% for property in properties %}
+            <li>{{ property.title }} - ${{ property.rent }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

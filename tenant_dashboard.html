@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Tenant Dashboard{% endblock %}
+{% block content %}
+    <h2>Available Properties</h2>
+    <ul>
+        {% for property in properties %}
+            <li>{{ property.title }} - ${{ property.rent }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
